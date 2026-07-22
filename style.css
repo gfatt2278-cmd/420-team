@@ -239,3 +239,10 @@ opacity:0;
 }
 
 }
+.firework{
+    position:fixed;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    pointer-events:none;
+}
