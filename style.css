@@ -283,3 +283,18 @@ opacity:0;
     animation:fade 1s;
 
 }
+#love-timer{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:18px;
+    text-align:center;
+    background:rgba(255,255,255,0.08);
+    padding:12px 20px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px hotpink;
+    z-index:999;
+}
