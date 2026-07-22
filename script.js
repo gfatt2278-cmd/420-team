@@ -2,20 +2,13 @@ const heart = document.getElementById("heart");
 const msg = document.getElementById("message");
 const music = document.getElementById("music");
 
-heart.onclick = function(){
+const envelope=document.getElementById("envelope");
 
-    msg.style.display = "block";
+const letter=document.getElementById("letter");
 
-    music.play();
+envelope.onclick=function(){
 
-    sparkle();
-
-    flowers();
-
-    fireworks(
-        window.innerWidth/2,
-        window.innerHeight/2
-    );
+    letter.style.display="block";
 
 }
 function sparkle(){
