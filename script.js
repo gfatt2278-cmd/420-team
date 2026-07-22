@@ -305,3 +305,12 @@ function fireworks(x,y){
     }
 
 }
+const envelope=document.getElementById("envelope");
+
+const letter=document.getElementById("letter");
+
+envelope.onclick=function(){
+
+    letter.style.display="block";
+
+}
