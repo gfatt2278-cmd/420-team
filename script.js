@@ -120,8 +120,7 @@ document.getElementById("letter-box").style.display="block";
 document.getElementById("heart-gallery").style.display="block";
 
 }
-    music.play();
-
+   
     sparkle();
 
     flowers();
@@ -171,8 +170,18 @@ let x=(Math.random()-0.5)*700;
 let y=(Math.random()-0.5)*700;
 
 h.animate([
-
-{transform:"translate(0,0)",opacity:1},
+{
+transform:"translate(0,0)",
+opacity:1
+},
+{
+transform:translate(${x}px,${y}px),
+opacity:0
+}
+],{
+duration:1500,
+easing:"ease-out"
+});
 
 const heart = document.getElementById("heart");
 const msg = document.getElementById("message");
