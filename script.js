@@ -45,3 +45,42 @@ s.remove();
 }
 
 }
+function flowers(){
+
+for(let i=0;i<40;i++){
+
+let flower=document.createElement("div");
+
+flower.innerHTML="🌹";
+
+flower.style.position="absolute";
+
+flower.style.left=Math.random()*window.innerWidth+"px";
+
+flower.style.top="-50px";
+
+flower.style.fontSize="30px";
+
+document.body.appendChild(flower);
+
+let y=0;
+
+let fall=setInterval(()=>{
+
+y+=5;
+
+flower.style.top=y+"px";
+
+if(y>window.innerHeight){
+
+clearInterval(fall);
+
+flower.remove();
+
+}
+
+},20);
+
+}
+
+}
