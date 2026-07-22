@@ -104,3 +104,20 @@ function typeText() {
 }
 
 typeText();
+heart.onclick = function(){
+
+    heart.style.transform="scale(1.5)";
+
+    setTimeout(()=>{
+        heart.style.transform="scale(1)";
+    },400);
+
+    msg.style.display="block";
+
+    music.play();
+
+    sparkle();
+
+    flowers();
+
+}
