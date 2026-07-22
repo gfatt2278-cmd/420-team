@@ -92,3 +92,15 @@ setInterval(() => {
     }, 6000);
 
 }, 500);
+const text = "မင်းကို အမြဲချစ်နေပါတယ် ❤️";
+let i = 0;
+
+function typeText() {
+    if (i < text.length) {
+        document.getElementById("message").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 80);
+    }
+}
+
+typeText();
