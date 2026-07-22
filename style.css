@@ -246,3 +246,40 @@ opacity:0;
     border-radius:50%;
     pointer-events:none;
 }
+#letter-box{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:999;
+    text-align:center;
+}
+
+#envelope{
+    font-size:90px;
+    cursor:pointer;
+    animation:beat 1.2s infinite;
+}
+
+#letter{
+
+    display:none;
+
+    margin-top:20px;
+
+    width:300px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:white;
+
+    color:#ff1493;
+
+    box-shadow:0 0 40px hotpink;
+
+    animation:fade 1s;
+
+}
