@@ -103,16 +103,23 @@ function typeText() {
 }
 
 typeText();
-heart.onclick = function(){
+heart.onclick=function(){
 
-    heart.style.transform="scale(1.5)";
+msg.style.display="block";
 
-    setTimeout(()=>{
-        heart.style.transform="scale(1)";
-    },400);
+music.play();
 
-    msg.style.display="block";
+sparkle();
 
+flowers();
+
+fireworks(window.innerWidth/2,window.innerHeight/2);
+
+document.getElementById("letter-box").style.display="block";
+
+document.getElementById("heart-gallery").style.display="block";
+
+}
     music.play();
 
     sparkle();
