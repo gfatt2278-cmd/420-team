@@ -2,7 +2,7 @@ const heart = document.getElementById("heart");
 const msg = document.getElementById("message");
 const music = document.getElementById("music");
 
-heart.onclick = function () {
+heart.onclick = function(){
 
     msg.style.display = "block";
 
@@ -11,7 +11,13 @@ heart.onclick = function () {
     sparkle();
 
     flowers();
-};
+
+    fireworks(
+        window.innerWidth/2,
+        window.innerHeight/2
+    );
+
+}
 function sparkle(){
 
 for(let i=0;i<60;i++){
