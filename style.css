@@ -98,3 +98,34 @@ transform:translateY(0);
 }    
 
 }
+#message{
+    display:none;
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 0 30px rgba(255,0,100,.5);
+    animation:fade 1.5s;
+}
+#heart{
+    font-size:120px;
+    cursor:pointer;
+    animation:beat 1s infinite;
+    filter:drop-shadow(0 0 25px hotpink);
+}
+body{
+    margin:0;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#000,#180018,#220033,#000);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
