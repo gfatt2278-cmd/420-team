@@ -238,3 +238,64 @@ star.remove();
 }
 
 setInterval(shootingStar,1800);
+function fireworks(x,y){
+
+    const colors=[
+        "#ff0080",
+        "#ffcc00",
+        "#00ffff",
+        "#00ff66",
+        "#ffffff",
+        "#ff4444"
+    ];
+
+    for(let i=0;i<80;i++){
+
+        let p=document.createElement("div");
+
+        p.className="firework";
+
+        p.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+        p.style.left=x+"px";
+
+        p.style.top=y+"px";
+
+        document.body.appendChild(p);
+
+        let angle=Math.random()*Math.PI*2;
+
+        let distance=Math.random()*220+80;
+
+        let dx=Math.cos(angle)*distance;
+
+        let dy=Math.sin(angle)*distance;
+
+        p.animate([
+
+            {
+                transform:"translate(0,0) scale(1)",
+                opacity:1
+            },
+
+            {
+                transform:translate(${dx}px,${dy}px) scale(0),
+                opacity:0
+            }
+
+        ],{
+
+            duration:1200,
+            easing:"ease-out"
+
+        });
+
+        setTimeout(()=>{
+
+            p.remove();
+
+        },1200);
+
+    }
+
+}
