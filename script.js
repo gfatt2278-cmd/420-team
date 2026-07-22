@@ -314,12 +314,6 @@ envelope.onclick=function(){
     letter.style.display="block";
 
 }
-❤️ Together Since ❤️
-
-2023-02-1
-
-❤️ 3 Year
-❤️ 6 Months
 const startDate = new Date(2023,2,1,0,0,0);
 
 function updateLoveTimer(){
