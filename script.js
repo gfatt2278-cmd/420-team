@@ -1,23 +1,17 @@
 const heart = document.getElementById("heart");
-const message = document.getElementById("message");
+const msg = document.getElementById("message");
+const music = document.getElementById("music");
 
-heart.onclick = function(){
+heart.onclick = function () {
 
-    message.style.display = "block";
+    msg.style.display = "block";
 
+    music.play();
+
+    sparkle();
+
+    flowers();
 };
-const heart=document.getElementById("heart");
-const msg=document.getElementById("message");
-
-heart.onclick=function(){
-
-msg.style.display="block";
-
-sparkle();
-
-flowers();
-
-}
 function sparkle(){
 
 for(let i=0;i<60;i++){
