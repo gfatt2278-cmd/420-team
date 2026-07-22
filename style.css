@@ -129,3 +129,35 @@ body{
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+
+}
+document.addEventListener("mousemove",(e)=>{
+
+let s=document.createElement("div");
+
+s.innerHTML="✨";
+
+s.style.position="fixed";
+
+s.style.left=e.clientX+"px";
+
+s.style.top=e.clientY+"px";
+
+document.body.appendChild(s);
+
+setTimeout(()=>s.remove(),500);
+
+});
+setInterval(flowers,3000);
+    
