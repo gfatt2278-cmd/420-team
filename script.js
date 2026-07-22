@@ -121,3 +121,24 @@ heart.onclick = function(){
     flowers();
 
 }
+setInterval(()=>{
+
+let h=document.createElement("div");
+
+h.innerHTML="💖";
+
+h.style.position="fixed";
+
+h.style.left=Math.random()*window.innerWidth+"px";
+
+h.style.bottom="-50px";
+
+h.style.fontSize="25px";
+
+h.style.animation="float 6s linear";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),6000);
+
+},600);
