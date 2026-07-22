@@ -313,3 +313,30 @@ envelope.onclick=function(){
 
 ❤️ 3 Year
 ❤️ 6 Months
+const startDate = new Date(2023,2,1,0,0,0);
+
+function updateLoveTimer(){
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+
+    const hours = Math.floor((diff/(1000*60*60))%24);
+
+    const minutes = Math.floor((diff/(1000*60))%60);
+
+    const seconds = Math.floor((diff/1000)%60);
+
+    document.getElementById("timer").innerHTML =
+        days+" Days 💖 "+
+        hours+" Hours 💖 "+
+        minutes+" Minutes 💖 "+
+        seconds+" Seconds";
+
+}
+
+setInterval(updateLoveTimer,1000);
+
+updateLoveTimer();
