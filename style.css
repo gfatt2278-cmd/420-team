@@ -1,1 +1,28 @@
+body{
+    margin:0;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    flex-direction:column;
+}
 
+#heart{
+    font-size:120px;
+    cursor:pointer;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+#message{
+    display:none;
+    color:white;
+    text-align:center;
+    margin-top:30px;
+}
