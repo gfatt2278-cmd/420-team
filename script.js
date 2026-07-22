@@ -217,3 +217,24 @@ setTimeout(typing,80);
 }
 
 }
+function shootingStar(){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*window.innerWidth+"px";
+
+star.style.top=Math.random()*200+"px";
+
+document.getElementById("shooting-stars").appendChild(star);
+
+setTimeout(()=>{
+
+star.remove();
+
+},2000);
+
+}
+
+setInterval(shootingStar,1800);
