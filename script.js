@@ -174,7 +174,7 @@ h.animate([
 
 {transform:"translate(0,0)",opacity:1},
 
-{transform:translate(${x}px,${y}px),opacity:0}
+transform:translate(${dx}px,${dy}px) scale(0),
 
 ],{
 
