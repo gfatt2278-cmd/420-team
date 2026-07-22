@@ -78,3 +78,17 @@ flower.remove();
 }
 
 }
+setInterval(() => {
+    const h = document.createElement("div");
+    h.className = "floating-heart";
+    h.innerHTML = "💖";
+
+    h.style.left = Math.random() * window.innerWidth + "px";
+
+    document.body.appendChild(h);
+
+    setTimeout(() => {
+        h.remove();
+    }, 6000);
+
+}, 500);
