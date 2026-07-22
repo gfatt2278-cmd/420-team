@@ -1,18 +1,72 @@
-music.volume=0;
+// ==========================
+// MUSIC FADE IN
+// ==========================
 
-music.play();
+const music = document.getElementById("music");
 
-let fade=setInterval(()=>{
+function playMusic(){
 
-if(music.volume<1){
+    if(!music) return;
 
-music.volume+=0.05;
 
-}else{
+    music.volume = 0;
 
-clearInterval(fade);
+
+    music.play()
+    .then(()=>{
+
+        let volume = 0;
+
+        let fade = setInterval(()=>{
+
+            if(volume < 1){
+
+                volume += 0.05;
+
+                music.volume = Math.min(volume,1);
+
+            }
+            else{
+
+                clearInterval(fade);
+
+            }
+
+
+        },200);
+
+
+    })
+    .catch(error=>{
+
+        console.log("Music blocked:",error);
+
+    });
 
 }
 
-},200);
-setInterval(flowers,2500);
+
+
+// ==========================
+// FLOWERS AUTO CREATE
+// ==========================
+
+let flowerTimer;
+
+
+function startFlowers(){
+
+    flowerTimer = setInterval(()=>{
+
+        flowers();
+
+    },2500);
+
+}
+
+
+// START
+
+playMusic();
+
+startFlowers();
