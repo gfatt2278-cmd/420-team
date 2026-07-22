@@ -1,1 +1,18 @@
+music.volume=0;
 
+music.play();
+
+let fade=setInterval(()=>{
+
+if(music.volume<1){
+
+music.volume+=0.05;
+
+}else{
+
+clearInterval(fade);
+
+}
+
+},200);
+setInterval(flowers,2500);
