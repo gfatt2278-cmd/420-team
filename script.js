@@ -347,3 +347,24 @@ function updateLoveTimer(){
 setInterval(updateLoveTimer,1000);
 
 updateLoveTimer();
+.gallery{
+
+animation:zoom 2s infinite alternate;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.1);
+
+}
+
+}
