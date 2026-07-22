@@ -142,3 +142,78 @@ document.body.appendChild(h);
 setTimeout(()=>h.remove(),6000);
 
 },600);
+heart.addEventListener("click",()=>{
+
+for(let i=0;i<25;i++){
+
+let h=document.createElement("span");
+
+h.innerHTML="💖";
+
+h.style.position="fixed";
+
+h.style.left=window.innerWidth/2+"px";
+
+h.style.top=window.innerHeight/2+"px";
+
+h.style.fontSize="30px";
+
+document.body.appendChild(h);
+
+let x=(Math.random()-0.5)*700;
+
+let y=(Math.random()-0.5)*700;
+
+h.animate([
+
+{transform:"translate(0,0)",opacity:1},
+
+{transform:translate(${x}px,${y}px),opacity:0}
+
+],{
+
+duration:1200
+
+});
+
+setTimeout(()=>h.remove(),1200);
+
+}
+
+});
+body{
+
+background:linear-gradient(-45deg,#000,#180024,#25003d,#000);
+
+background-size:400% 400%;
+
+animation:bg 10s ease infinite;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+const text="💖 မင်းကို အမြဲချစ်နေပါတယ် 💖";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("messageText").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,80);
+
+}
+
+}
